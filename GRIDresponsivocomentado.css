@@ -1,0 +1,103 @@
+/* Estilos gerais para o corpo da página */
+body {
+    background: white; /* Cor de fundo da página */
+    margin: 0; /* Removendo a margem padrão */
+    font-family: Arial, sans-serif; /* Definindo a fonte padrão */
+}
+
+/* Container principal que centraliza o conteúdo e organiza o layout com grid */
+.container {
+    display: grid; /* Usando grid layout */
+    grid-template-columns: 1fr; /* Definindo uma única coluna por padrão (para telas pequenas) */
+    gap: 20px; /* Espaço entre os itens do grid */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 1200px; /* Largura máxima da página */
+    margin: 0 auto; /* Centralizando o container */
+}
+
+/* Estilos para o grid responsivo: quando a tela for maior que 768px, a página passa a ter duas colunas */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas de igual largura */
+    }
+}
+
+/* Estilos para telas maiores (maiores que 1024px), o grid terá duas colunas com a segunda coluna sendo o dobro da primeira */
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 2fr; /* Uma coluna com 1 fração e a segunda com 2 frações */
+    }
+}
+
+/* Estilo para os títulos h1 (nome do profissional) */
+h1 {
+    background-color: black; /* Cor de fundo do título */
+    color: white; /* Cor do texto */
+    padding: 15px; /* Espaçamento interno ao redor do texto */
+    border-radius: 20px; /* Borda arredondada */
+    text-align: center; /* Centralizando o texto */
+}
+
+/* Estilo para os subtítulos h2 (seções como 'Objetivo', 'Formação', etc.) */
+h2 {
+    background-color: rgb(214, 213, 213); /* Cor de fundo */
+    padding: 25px; /* Espaçamento interno */
+    border-radius: 20px; /* Borda arredondada */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Borda sutil */
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15); /* Sombra leve */
+}
+
+/* Efeito ao passar o mouse sobre os títulos h2 */
+h2:hover {
+    background-color: black; /* Muda a cor de fundo para preto */
+    color: white; /* Muda a cor do texto para branco */
+}
+
+/* Estilo para os parágrafos (p) */
+p {
+    margin-left: 25px; /* Espaçamento à esquerda */
+    transition: 0.5s; /* Transição suave para mudanças */
+}
+
+/* Efeito ao passar o mouse sobre os parágrafos */
+p:hover {
+    background-color: rgb(214, 213, 213); /* Muda o fundo ao passar o mouse */
+    padding: 10px; /* Adiciona espaçamento */
+    border-radius: 20px; /* Borda arredondada */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Borda sutil */
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15); /* Sombra leve */
+}
+
+/* Estilo para as listas não ordenadas (ul) */
+ul {
+    list-style-type: none; /* Removendo os marcadores padrão das listas */
+    padding-left: 0; /* Removendo o padding à esquerda */
+    margin-left: 25px; /* Adicionando margem à esquerda para alinhamento */
+}
+
+/* Estilo para os itens das listas (li) */
+li {
+    margin-top: 15px; /* Espaçamento entre os itens da lista */
+}
+
+/* Estilo para a imagem do perfil (com borda arredondada para fazer o formato de círculo) */
+.profile-img {
+    max-width: 100%; /* Garantindo que a imagem não ultrapasse os limites */
+    border-radius: 50%; /* Tornando a imagem circular */
+}
+
+/* Estilo para os links */
+a {
+    color: #0066cc; /* Cor do link */
+    text-decoration: none; /* Removendo o sublinhado */
+}
+
+/* Estilo para os links quando o usuário passa o mouse */
+a:hover {
+    text-decoration: underline; /* Adicionando o sublinhado ao passar o mouse */
+}
+
+/* Estilo para o link de voltar (com uma imagem pequena) */
+.back-link img {
+    width: 50px; /* Largura da imagem */
+}
