@@ -1,0 +1,88 @@
+/* Definição de variáveis de cores para fácil manutenção e personalização */
+:root {
+    --cor-coluna-esquerda: #71c98b; /* Cor de fundo da coluna esquerda */
+    --cor-coluna-direita: #e5e5e5; /* Cor de fundo da coluna direita */
+    --cor-logo: #00571a; /* Cor do logo e dos botões do menu */
+}
+
+/* Resetando as margens e o padding de todos os elementos para garantir um layout consistente */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais do body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Definindo a fonte padrão */
+    display: flex; /* Usando o Flexbox para disposição das colunas lado a lado */
+    flex-direction: row; /* As colunas serão dispostas em uma linha (horizontalmente) */
+}
+
+/* Estilos gerais para as colunas */
+.coluna {
+    height: 100vh; /* Definindo a altura das colunas como 100% da altura da tela */
+    display: flex; /* Flexbox para organizar o conteúdo dentro da coluna */
+    flex-direction: column; /* Os itens dentro da coluna serão dispostos de forma vertical */
+    justify-content: center; /* Centralizando os itens verticalmente */
+    align-items: center; /* Centralizando os itens horizontalmente */
+    color: rgb(56, 56, 56); /* Cor do texto das colunas */
+}
+
+/* Estilos específicos para a coluna esquerda */
+.coluna-esquerda {
+    color: white; /* Texto branco */
+    max-width: 200px; /* Largura máxima da coluna esquerda */
+    padding-right: 20px; /* Espaçamento interno à direita */
+    padding-left: 20px; /* Espaçamento interno à esquerda */
+    background-color: var(--cor-coluna-esquerda); /* Cor de fundo definida pela variável */
+    border-right: 1px solid var(--cor-logo); /* Borda direita */
+}
+
+/* Estilos para o título da coluna direita */
+.coluna-direita h1 {
+    margin-bottom: 25px; /* Espaçamento abaixo do título */
+}
+
+/* Estilos para a coluna direita */
+.coluna-direita {
+    flex-grow: 4; /* A coluna direita ocupa 4 vezes o tamanho da coluna esquerda */
+    background-color: var(--cor-coluna-direita); /* Cor de fundo definida pela variável */
+}
+
+/* Estilos para a lista na coluna esquerda */
+.coluna-esquerda ul {
+    list-style: none; /* Removendo o estilo de lista padrão (bolinhas) */
+    padding: 0; /* Removendo o padding */
+}
+
+/* Estilos para cada item da lista */
+.coluna-esquerda li {
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilos para os links dentro da coluna esquerda */
+.coluna-esquerda a {
+    display: flex; /* Usando Flexbox para organizar o ícone e o texto */
+    align-items: center; /* Alinhando verticalmente os itens dentro do link */
+    padding: 10px 20px; /* Espaçamento interno ao redor do texto e do ícone */
+    background-color: var(--cor-logo); /* Cor de fundo dos links, definida pela variável */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Removendo o sublinhado padrão dos links */
+    font-weight: 600; /* Deixando o texto em negrito */
+    border-radius: 15px; /* Bordas arredondadas nos links */
+    transition: background-color 0.3s; /* Efeito de transição suave para a mudança de cor de fundo */
+}
+
+/* Efeito quando o usuário passa o mouse sobre o link */
+.coluna-esquerda a:hover {
+    background-color: var(--cor-coluna-esquerda); /* Mudando a cor de fundo quando passa o mouse */
+    color: black; /* Mudando a cor do texto */
+    font-weight: 600; /* Mantendo o texto em negrito */
+}
+
+/* Estilo para os ícones dentro dos links */
+.coluna-esquerda a iconify-icon {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}

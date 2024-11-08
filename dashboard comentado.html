@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Definindo o conjunto de caracteres usado no documento (UTF-8 para suportar caracteres especiais) -->
+    <meta charset="UTF-8">
+    
+    <!-- Tornando a página responsiva (ajusta o layout conforme o tamanho da tela do dispositivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Definindo o título da página, que será mostrado na aba do navegador -->
+    <title>Dashboard</title>
+    
+    <!-- Link para o arquivo de estilos (CSS externo), onde será definido o visual da página -->
+    <link rel="stylesheet" href="estilocomentado.css">
+</head>
+<body>
+    <!-- A coluna esquerda do dashboard -->
+    <div class="coluna coluna-esquerda">
+        <!-- Imagem do logo do sistema, com um tamanho fixo -->
+        <img src="img/logo_hidroponia.svg" alt="Logo do Sistema de Hidroponia" width="150px" />
+        
+        <!-- Lista de links de navegação, cada um levando a uma seção específica da página -->
+        <ul>
+            <li>
+                <!-- Link para a seção "Objetivo / Perfil Profissional" -->
+                <a href="#inicio">
+                    <!-- Ícone de 'home' da biblioteca Iconify -->
+                    <iconify-icon icon="material-symbols:home-outline"></iconify-icon>
+                    Objetivo / Perfil Profissional                    
+                </a>
+            </li>
+            <li>
+                <!-- Link para a seção "Formação" -->
+                <a href="#sensores">
+                    <!-- Ícone de 'cogs' da biblioteca Iconify -->
+                    <iconify-icon icon="fa-solid:cogs"></iconify-icon>
+                    Formação
+                </a>
+            </li>
+            <li>
+                <!-- Link para a seção "Histórico Profissional" -->
+                <a href="#informacoes">
+                    <!-- Ícone de 'informações' da biblioteca Iconify -->
+                    <iconify-icon icon="ph:info-bold"></iconify-icon>
+                    Histórico Profissional
+                </a>
+            </li>
+            <li>
+                <!-- Link para a seção "Informações Complementares" -->
+                <a href="#sistemas">
+                    <!-- Ícone de 'plant' da biblioteca Iconify -->
+                    <iconify-icon icon="tabler:plant"></iconify-icon>
+                    Informações Complementares
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- A coluna direita do dashboard, onde o conteúdo principal será exibido -->
+    <div class="coluna coluna-direita">
+        <!-- Título de exemplo para a coluna direita -->
+        <h1>Coluna Direita</h1>
+        
+        <!-- Aqui vai o conteúdo da coluna direita (gráficos, dados, etc.) -->
+    </div>
+
+    <!-- Script para carregar os ícones da biblioteca Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+</html>
