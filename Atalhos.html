@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Git - Central de Referência</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        pre {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            overflow-x: auto;
+        }
+        .command {
+            margin-bottom: 20px;
+        }
+        .command h2 {
+            color: #555;
+        }
+        .comment {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .note {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comandos Git - Central de Referência</h1>
+
+    <!-- Comando: Clonar Repositório -->
+    <div class="command">
+        <h2>1. Clonar um Repositório</h2>
+        <pre>git clone <span class="note">https://github.com/usuario/repositorio.git</span></pre>
+        <p class="comment">Clona um repositório remoto para sua máquina local. Use a URL do repositório que deseja clonar.</p>
+    </div>
+
+    <!-- Comando: Verificar Status -->
+    <div class="command">
+        <h2>2. Verificar o Status do Repositório</h2>
+        <pre>git status</pre>
+        <p class="comment">Exibe o status do repositório local, mostrando arquivos modificados, não rastreados ou prontos para commit.</p>
+    </div>
+
+    <!-- Comando: Adicionar Arquivo ao Staging -->
+    <div class="command">
+        <h2>3. Adicionar Arquivos ao Staging Area</h2>
+        <pre>git add <span class="note">arquivo.ext</span></pre>
+        <pre>git add .</pre>
+        <p class="comment">Adiciona arquivos ao índice (staging area) para serem incluídos no próximo commit. O ponto <code>.</code> adiciona todos os arquivos modificados.</p>
+    </div>
+
+    <!-- Comando: Commit -->
+    <div class="command">
+        <h2>4. Fazer um Commit</h2>
+        <pre>git commit -m "<span class="note">Mensagem de Commit</span>"</pre>
+        <p class="comment">Grava as alterações no repositório local. Sempre inclua uma mensagem clara e curta sobre o que foi alterado.</p>
+    </div>
+
+    <!-- Comando: Histórico de Commits -->
+    <div class="command">
+        <h2>5. Verificar o Histórico de Commits</h2>
+        <pre>git log</pre>
+        <p class="comment">Mostra o histórico de commits, incluindo hash, autor, data e mensagem de commit.</p>
+    </div>
+
+    <!-- Comando: Criar uma Nova Branch -->
+    <div class="command">
+        <h2>6. Criar uma Nova Branch</h2>
+        <pre>git branch <span class="note">nome-da-branch</span></pre>
+        <p class="comment">Cria uma nova branch com o nome especificado. A branch não será ativada automaticamente.</p>
+    </div>
+
+    <!-- Comando: Mudar de Branch -->
+    <div class="command">
+        <h2>7. Mudar de Branch</h2>
+        <pre>git checkout <span class="note">nome-da-branch</span></pre>
+        <p class="comment">Troca para a branch especificada.</p>
+    </div>
+
+    <!-- Comando: Criar e Mudar para Nova Branch -->
+    <div class="command">
+        <h2>8. Criar e Mudar para uma Nova Branch</h2>
+        <pre>git checkout -b <span class="note">nome-da-branch</span></pre>
+        <p class="comment">Cria uma nova branch e já muda para ela em um único comando.</p>
+    </div>
+
+    <!-- Comando: Merge de Branches -->
+    <div class="command">
+        <h2>9. Merge de Branches</h2>
+        <pre>git merge <span class="note">nome-da-branch</span></pre>
+        <p class="comment">Integra as alterações da branch especificada na branch atual. Pode gerar conflitos se houver alterações conflitantes.</p>
+    </div>
+
+    <!-- Comando: Remover Arquivo do Staging -->
+    <div class="command">
+        <h2>10. Remover um Arquivo do Staging</h2>
+        <pre>git reset <span class="note">arquivo.ext</span></pre>
+        <p class="comment">Remove o arquivo do staging area, mas mantém as alterações no diretório de trabalho.</p>
+    </div>
+
+    <!-- Comando: Enviar Alterações para o Repositório Remoto (Push) -->
+    <div class="command">
+        <h2>11. Enviar Alterações para o Repositório Remoto (Push)</h2>
+        <pre>git push origin <span class="note">nome-da-branch</span></pre>
+        <p class="comment">Envia os commits da branch local para o repositório remoto chamado <code>origin</code>. Substitua <code>nome-da-branch</code> pela sua branch de trabalho (geralmente <code>main</code> ou <code>master</code>).</p>
+    </div>
+
+    <!-- Comando: Baixar Alterações do Repositório Remoto (Pull) -->
+    <div class="command">
+        <h2>12. Baixar as Alterações do Repositório Remoto (Pull)</h2>
+        <pre>git pull origin <span class="note">nome-da-branch</span></pre>
+        <p class="comment">Baixa as alterações da branch remota chamada <code>nome-da-branch</code> e as mescla na sua branch local atual.</p>
+    </div>
+
+    <!-- Comando: Verificar Branches Existentes -->
+    <div class="command">
+        <h2>13. Verificar as Branches Existentes</h2>
+        <pre>git branch</pre>
+        <p class="comment">Lista todas as branches locais. A branch atual estará marcada com um asterisco (*).</p>
+    </div>
+
+    <!-- Comando: Excluir uma Branch -->
+    <div class="command">
+        <h2>14. Excluir uma Branch</h2>
+        <pre>git branch -d <span class="note">nome-da-branch</span></pre>
+        <p class="comment">Exclui a branch local especificada. A branch precisa estar mesclada para ser deletada de forma segura. Use <code>-D</code> para forçar a exclusão.</p>
+    </div>
+
+    <!-- Comando: Verificar Configurações de Usuário no Git -->
+    <div class="command">
+        <h2>15. Verificar Configurações de Usuário no Git</h2>
+        <pre>git config --global user.name "<span class="note">Seu Nome</span>"</pre>
+        <pre>git config --global user.email "<span class="note">seu-email@exemplo.com</span>"</pre>
+        <p class="comment">Define as configurações de nome e e-mail do seu usuário. O <code>--global</code> aplica para todos os repositórios.</p>
+    </div>
+
+    <!-- Comandos GitHub - Configurar Remoto -->
+    <div class="command">
+        <h2>16. Configurar o Repositório Remoto</h2>
+        <pre>git remote add origin <span class="note">https://github.com/usuario/repositorio.git</span></pre>
+        <p class="comment">Adiciona o repositório remoto com o nome <code>origin</code> e a URL do seu repositório no GitHub. Isso vincula o repositório local ao remoto.</p>
+    </div>
+
+    <!-- Comando: Verificar o Repositório Remoto -->
+    <div class="command">
+        <h2>17. Verificar o Repositório Remoto</h2>
+        <pre>git remote -v</pre>
+        <p class="comment">Exibe as URLs associadas ao repositório remoto (normalmente chamadas de <code>origin</code>). Isso permite verificar se o remoto está configurado corretamente.</p>
+    </div>
+
+    <!-- Comando: Alterar o URL do Repositório Remoto -->
+    <div class="command">
+        <h2>18. Alterar a URL do Repositório Remoto</h2>
+        <pre>git remote set-url origin <span class="note">https://github.com/usuario/novo-repositorio.git</span></pre>
+        <p class="comment">Altera a URL do repositório remoto <code>origin</code>. Útil se você mudar o repositório ou precisar mudar a URL de acesso.</p>
+    </div>
+
+    <!-- Comando: Remover o Repositório Remoto -->
+    <div class="command">
+        <h2>19. Remover o Repositório Remoto</h2>
+        <pre>git remote remove origin</pre>
+        <p class="comment">Remove o repositório remoto chamado <code>origin</code>. Pode ser necessário se você não precisar mais de uma conexão remota.</p>
+    </div>
+
+</body>
+</html>
